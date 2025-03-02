@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices.JavaScript;
 
 class Program
 {
@@ -6,6 +7,7 @@ class Program
     {
 
         //Operatory
+        Console.WriteLine("Operatory\n");
 
         //ZADANIE 1
 
@@ -117,5 +119,96 @@ class Program
         Console.WriteLine("\n");
 
 
+
+
+        //Instrukcje sterujące i pętle
+        Console.WriteLine("Instrukcje sterujące i pętle\n");
+
+        //Zadanie 1
+        Console.WriteLine("ZADANIE 1");
+
+        // 1.
+        int n1 = 10;
+        int n2 = 28;
+
+        // 2.
+        if (n1 > n2)
+        {
+            Console.WriteLine("n1 jest większe od n2");
+        }
+        else if (n1 == n2)
+        {
+            Console.WriteLine("n1 jest równe n2");
+        }
+        else
+        {
+            Console.WriteLine("n1 jest mniejsze od n2");
+        }
+        Console.WriteLine("\n");
+
+
+
+        //Zadanie 2
+        Console.WriteLine("ZADANIE 2");
+
+        // Pętla for
+        Console.WriteLine("Wynik pętli for:");
+        for (int i = 1; i < 11; i++)
+        {
+            Console.WriteLine(i+". C#");
+        }
+
+        // Pętla while
+        Console.WriteLine("\nWynik pętli while:");
+        int counter = 1;
+        while (counter < 11)
+        {
+            Console.WriteLine(counter+". C#");
+            counter++;
+        }
+        Console.WriteLine("\n");
+
+
+        //Zadanie 3
+        Console.WriteLine("ZADANIE 3");
+
+        // 1. 
+        int n = 10;
+
+        // 2. 
+        for (int i = 0; i <= n; i++)
+        {
+            if (i % 2 == 0)
+            {
+                Console.WriteLine($"{i} - Parzysta");
+            }
+            else
+            {
+                Console.WriteLine($"{i} - Nieparzysta");
+            }
+        }
+
+        Console.WriteLine("\n");
+
+
+        
+        //Zadanie 4
+        Console.WriteLine("ZADANIE 4");
+        // 1.
+        n = 5;
+
+        // 2.
+        for (int i = 1; i <= n; i++)
+        {
+            for (int j = 1; j <= i; j++)
+            {
+                Console.Write("* ");
+            }
+            Console.WriteLine();
+        }
+
+
+        Console.WriteLine("\n");
+        
     }
 }
