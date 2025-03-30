@@ -195,7 +195,7 @@ class Program
         //Zadanie 4
         Console.WriteLine("ZADANIE 4");
         // 1.
-        n = 5;
+        n = 3;
 
         // 2.
         for (int i = 1; i <= n; i++)
@@ -209,6 +209,48 @@ class Program
 
 
         Console.WriteLine("\n");
+
+
+
+        //ZADANIE 6
+        Console.WriteLine("ZADANIE 6");
+
+        // 1.
         
+        int exam = 57; 
+
+        // 2.
+
+        if (exam < 0 || exam > 100)
+        {
+            Console.WriteLine("Wartość poza zakresem");
+        }
+        else if (exam <= 39)
+        {
+            Console.WriteLine("Ocena Niedostateczna");
+        }
+        else if (exam <= 49)
+        {
+            Console.WriteLine("Ocena Dopuszczająca");
+        }
+        else if (exam <= 69)
+        {
+            Console.WriteLine("Ocena Dostateczna");
+        }
+        else if (exam <= 84)
+        {
+            Console.WriteLine("Ocena Dobra");
+        }
+        else if (exam <= 99)
+        {
+            Console.WriteLine("Ocena Bardzo Dobra");
+        }
+        else // exam == 100
+        {
+            Console.WriteLine("Ocena Celująca");
+        }
+
+        Console.WriteLine("\n");
+
     }
 }
