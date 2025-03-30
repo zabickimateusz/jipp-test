@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.InteropServices.JavaScript;
+using System.Collections.Generic;
 
 class Program
 {
@@ -251,6 +252,88 @@ class Program
         }
 
         Console.WriteLine("\n");
+
+
+
+
+        //Kolekcje
+        Console.WriteLine("Kolekcje\n");
+
+        //ZADANIE 1
+        Console.WriteLine("ZADANIE 1");
+
+        // 1 
+        string[] colors = new string[4];
+
+        // 2
+        colors[0] = "niebieski";
+        colors[1] = "zielony";
+        colors[2] = "żółty";
+        colors[3] = "czerwony";
+
+        // 3
+        Console.WriteLine($"Mój pierwszy kolor to: {colors[0]}");
+
+        // 4
+        Console.WriteLine($"Mój ostatni kolor to: {colors[3]}");
+
+        Console.WriteLine("\n");
+
+
+        //ZADANIE 2
+        Console.WriteLine("ZADANIE 2");
+
+        // 1
+        int[] numbers = { 3, 1, 11, 13, 12, 19, 23, 36, 31, 37 };
+
+        // 2 
+        Console.WriteLine("Pętla for:");
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            Console.WriteLine($"Liczba: {numbers[i]}");
+        }
+
+        Console.WriteLine("\nPętla foreach:");
+        foreach (int num in numbers)
+        {
+            Console.WriteLine($"Liczba: {num}");
+        }
+
+        Console.WriteLine("\nPętla while:");
+        int counter2 = 0;
+        while (counter2 < numbers.Length)
+        {
+            Console.WriteLine($"Liczba: {numbers[counter2]}");
+            counter2++;
+        }
+
+        Console.WriteLine("\n");
+
+        //ZADANIE 3
+        Console.WriteLine("ZADANIE 3");
+
+        // 1.
+        
+        List<string> fruits = new List<string>();
+
+        // 2.
+        fruits.Add("Kiwi");
+        fruits.Add("Gruszka");
+        fruits.Add("Pomarańcz");
+        fruits.Add("Mango");
+
+        // 3.
+        fruits.Remove("Pomarańcz");
+
+        // 4.
+        Console.WriteLine("Zawartość listy fruits po usunięciach:");
+        foreach (var fruit in fruits)
+        {
+            Console.WriteLine(fruit);
+        }
+        
+        Console.WriteLine("\n");
+
 
     }
 }
