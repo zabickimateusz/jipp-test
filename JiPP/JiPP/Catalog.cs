@@ -1,18 +1,24 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using MySqlConnector;
 
 namespace JiPP;
 
 internal class Catalog
 {
-    private readonly List<Game> _gry = new()
+    private readonly List<Game> _gry = new();
+
+    public Catalog()
     {
-        new(1, "Cyberpunk 2077", 149.99m, 5),
-        new(2, "Wiedźmin 3",      79.99m,10),
-        new(3, "Elden Ring",     219.99m, 4),
-        new(4, "Hades",           59.99m, 7),
-        new(5, "Stardew Valley",  42.99m,12),
-    };
+        using var c = Database.Get();
+        c.Open();
+        using var cmd = new MySqlCommand(
+            "SELECT id, tytul, cena, stan FROM gry ORDER BY id", c);
+        using var r = cmd.ExecuteReader();
+        while (r.Read())
+            _gry.Add(new Game(r.GetInt32(0), r.GetString(1),
+                r.GetDecimal(2), r.GetInt32(3)));
+    }
 
     public IEnumerable<Game> Wszystkie() => _gry;
     public Game? Znajdz(int id) => _gry.FirstOrDefault(g => g.Id == id);
